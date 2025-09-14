@@ -1,6 +1,4 @@
 def average(name_dict):
-    if not name_dict:
-        return 0
     total = sum(name_dict.values())
     return total / len(name_dict)
 
