@@ -1,5 +1,5 @@
 def famous_births(birth_dict):
-    for key, value in birth_dict.items():
+    for value in birth_dict.items():
         print(f"{value['name']} is a great scientist born in {value['date_of_birth']}")
     
 women_scientists = {
