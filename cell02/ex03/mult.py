@@ -9,4 +9,4 @@ if result > 0:
 elif result < 0:
     print("The result is negative")
 else:
-    print("The result is positive and negativeo")
+    print("The result is positive and negative")
