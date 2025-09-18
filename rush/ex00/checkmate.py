@@ -7,6 +7,11 @@ def find_king(board):
                 return row, col
     return None
 
+def is_valid_piece(piece):
+    """Check if piece is valid"""
+    valid_pieces = {'K', '.', 'Q', 'R', 'P', 'B', ' '}
+    return piece in valid_pieces
+
 def is_valid_position(row, col, board_lines):
     """Check if position is within board bounds"""
     return 0 <= row < len(board_lines) and 0 <= col < len(board_lines[0])
@@ -91,6 +96,11 @@ def checkmate(board):
             if len(line) != board_size:
                 print("Fail")
                 return
+            
+            for piece in line:
+                if not is_valid_piece(piece):
+                    print("")
+                    return
         
         # Find the King
         king_pos = find_king(board)
